@@ -11,3 +11,15 @@ addition.addEventListener('click', function() {
   const solution = num1 + num2;
   h2.textContent += `[${solution}]`;
 })
+subtraction.addEventListener('click', function() {
+  const solution = num1 - num2;
+  h2.textContent += `[${solution}]`;
+})
+multiplication.addEventListener('click', function() {
+  const solution = num1 * num2;
+  h2.textContent += `[${solution}]`;
+})
+division.addEventListener('click', function() {
+  const solution = num1 / num2;
+  h2.textContent += `[${solution}]`;
+})
