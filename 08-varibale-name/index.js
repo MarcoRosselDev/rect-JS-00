@@ -4,12 +4,13 @@
 
 // Render the welcome message using welcomeEl.innerText
 
-/* 
+const h1 = document.querySelector('.h1');
+const button = document.querySelector('.button');
 
-<form action="">
-  <h1 class="h1">What's your name</h1>
-  <input type="text">
-  <button type="submit">send</button>
-</form>
+let name = 'marco';
+let lastName = 'rossel';
 
-*/
+button.addEventListener('click', function(){
+  let lorem = `hello mi name is ${name} ${lastName} `
+  h1.innerText = lorem ;
+});
