@@ -11,6 +11,7 @@ const h2 = document.querySelector('.h2');
 const buttonDown = document.querySelector('.buttondown');
 const buttonUp = document.querySelector('.buttonUp');
 const buttonSave = document.querySelector('.buttonSave');
+const recete = document.querySelector('.recete');
 let p = document.querySelector('.p');
 
 let count = 0;
@@ -24,6 +25,11 @@ buttonUp.addEventListener('click', function(){
   count += 1;
   h2.innerHTML = count;
 });
+
+recete.addEventListener('click', function(){
+  count = 0;
+  h2.innerHTML = count;
+})
 
 buttonSave.addEventListener('click', function(){
   p.innerHTML += `[${count}] `;
