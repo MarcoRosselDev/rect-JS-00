@@ -9,17 +9,17 @@ let num2 = 3;
 
 addition.addEventListener('click', function() {
   const solution = num1 + num2;
-  h2.textContent += `[${solution}]`;
+  h2.textContent = `result:[${solution}]`;
 })
 subtraction.addEventListener('click', function() {
   const solution = num1 - num2;
-  h2.textContent += `[${solution}]`;
+  h2.textContent = `result:[${solution}]`;
 })
 multiplication.addEventListener('click', function() {
   const solution = num1 * num2;
-  h2.textContent += `[${solution}]`;
+  h2.textContent = `result:[${solution}]`;
 })
 division.addEventListener('click', function() {
   const solution = num1 / num2;
-  h2.textContent += `[${solution}]`;
+  h2.textContent = `result:[${solution}]`;
 })
