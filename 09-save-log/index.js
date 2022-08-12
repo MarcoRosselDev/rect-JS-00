@@ -26,5 +26,5 @@ buttonUp.addEventListener('click', function(){
 });
 
 buttonSave.addEventListener('click', function(){
-  p.innerHTML += `${count} - `;
+  p.innerHTML += `[${count}] `;
 });
