@@ -10,7 +10,7 @@ const recete = document.querySelector('.recete');
 let count = 0;
 
 button.addEventListener('click', function(){
-  count = count + 1;
+  count += 1;
   h1.innerHTML = count;
   /* h1.innerText = count;
 
@@ -20,7 +20,7 @@ button.addEventListener('click', function(){
 });
 
 buttonDown.addEventListener('click', function(){
-  count = count - 1;
+  count -=  1;
   h1.innerHTML = count;
 });
 

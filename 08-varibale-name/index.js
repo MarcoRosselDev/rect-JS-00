@@ -11,6 +11,6 @@ let name = 'marco';
 let lastName = 'rossel';
 
 button.addEventListener('click', function(){
-  let lorem = `hello mi name is ${name} ${lastName} `
+  const  lorem = `hello mi name is ${name} ${lastName} `
   h1.innerText = lorem ;
 });
