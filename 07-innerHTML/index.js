@@ -9,5 +9,10 @@ let count = 0;
 
 button.addEventListener('click', function(){
   count = count + 1;
-  h1.innerText = count;
+  h1.innerHTML = count;
+  /* h1.innerText = count;
+
+  por lo que veo se puede con innerText y innerHTML
+  por que? no tengo idea 
+  */
 })
