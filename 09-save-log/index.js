@@ -11,7 +11,7 @@ const h2 = document.querySelector('.h2');
 const buttonDown = document.querySelector('.buttondown');
 const buttonUp = document.querySelector('.buttonUp');
 const buttonSave = document.querySelector('.buttonSave');
-const p = document.querySelector('.p');
+let p = document.querySelector('.p');
 
 let count = 0;
 
@@ -26,6 +26,5 @@ buttonUp.addEventListener('click', function(){
 });
 
 buttonSave.addEventListener('click', function(){
-  count = 0;
-  p.innerHTML = count;
+  p.innerHTML += `${count} - `;
 });
