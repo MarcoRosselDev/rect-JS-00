@@ -17,13 +17,14 @@ button.addEventListener('click', function(){
   por lo que veo se puede con innerText y innerHTML
   por que? no tengo idea 
   */
+});
+
+buttonDown.addEventListener('click', function(){
+  count = count - 1;
+  h1.innerHTML = count;
+});
+
+recete.addEventListener('click', function (){
+  count = 0;
+  h1.innerHTML = count;
 })
-
-/* 
-<button class="button">up..</button>
-  <button class="recete"></button>
-  <button class="button-decres">down</button>
-
-
-
-*/
