@@ -4,6 +4,8 @@
 
 let h1 = document.querySelector('.h1');
 const button = document.querySelector('.button');
+const buttonDown = document.querySelector('.button-decres');
+const recete = document.querySelector('.recete');
 
 let count = 0;
 
@@ -16,3 +18,12 @@ button.addEventListener('click', function(){
   por que? no tengo idea 
   */
 })
+
+/* 
+<button class="button">up..</button>
+  <button class="recete"></button>
+  <button class="button-decres">down</button>
+
+
+
+*/
