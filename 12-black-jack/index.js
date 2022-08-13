@@ -1,8 +1,9 @@
-const button = document.querySelector('.button0');
+const button = document.querySelector('.buttonStart');
 const cards = document.querySelector('.cards');
 const sum = document.querySelector('.sum');
 const h3 = document.querySelector('.h3');
 const div = document.querySelector('.div1');
+const buttonNewCard = document.querySelector('.buttonNewCard');
 
 button.addEventListener('click', function(){
 
@@ -10,11 +11,12 @@ button.addEventListener('click', function(){
   let card1 = Math.floor(Math.random() * 12);
   let card2 = Math.floor(Math.random() * 12);
   cards.innerText = `Cards: ${card1}, ${card2}`;
-
+  
   /* sum of the cards*/
   let sumCards = card1 + card2;
   sum.innerText = `Sum: ${sumCards}`;
-
+  
+  /* conditional and print text */
   if (sumCards < 21) {
     h3.innerText = `Do you want to draw a new card?`;
     div.classList.remove('add');
@@ -23,6 +25,13 @@ button.addEventListener('click', function(){
   } else {
     h3.innerText = `You're out of the game!`;
   }
+  
+  buttonNewCard.addEventListener('click', function(){
+    let card3 = Math.floor(Math.random() * 12);
+    console.log(card3);
+    const sumAllCards = sumCards + card3;
+    console.log(sumAllCards); 
+  })
 })
 
 
