@@ -1,6 +1,7 @@
 const button = document.querySelector('.button');
 const cards = document.querySelector('.cards');
 const sum = document.querySelector('.sum');
+const h3 = document.querySelector('.h3');
 
 button.addEventListener('click', function(){
 
@@ -10,8 +11,16 @@ button.addEventListener('click', function(){
   cards.innerText = `Cards: ${card1}, ${card2}`;
 
   /* sum of the cards*/
-  sumaCards = card1 + card2;
-  sum.innerText = `Sum: ${sumaCards}`;
+  let sumCards = card1 + card2;
+  sum.innerText = `Sum: ${sumCards}`;
+
+  if (sumCards < 21) {
+    h3.innerText = `Do you want to draw a new card?`
+  } else if (sumCards === 21) {
+    h3.innerText = `Wohooo! You've got Blackjack!`
+  } else {
+    h3.innerText = `You're out of the game!`
+  }
 })
 
 
