@@ -12,6 +12,6 @@ console.table(number[1]); */
 
 Use console.log to log out the numbers*/
 
-for (let index = 0; index <= 100; index += 10) {
+for (let index = 10; index <= 100; index += 10) {
   console.log(index);
 }
