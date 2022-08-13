@@ -8,14 +8,17 @@
 
 */
 const button = document.querySelector('.button');
+const h3 = document.querySelector('.h3');
 
-let player1 = Math.floor(Math.random()* 90);
-let player2 = Math.floor(Math.random()* 90);
 
 button.addEventListener('click', function(){
+  let player1 = Math.floor(Math.random()* 90);
+  let player2 = Math.floor(Math.random()* 90);
   if (player1 > player2) {
-    
+    h3.innerText = `${player1} > ${player2}, player1 win!`;
+  } else if (player1 < player2) {
+    h3.innerText = `${player1} < ${player2}, player2 win!`;
   } else {
-    
+    h3.innerText = `${player1} = ${player2}, empate!`;
   }
 })
