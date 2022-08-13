@@ -1,15 +1,14 @@
 const button = document.querySelector('.button');
-
-let card1 = Math.floor(Math.random()*13);
-console.log(card1);
+const cards = document.querySelector('.cards');
+const sum = document.querySelector('.sum');
 
 button.addEventListener('click', function(){
-
+  let card1 = Math.floor(Math.random() * 13);
+  let card2 = Math.floor(Math.random() * 13);
+  cards.innerText = `Cards: ${card1}, ${card2}`;
 })
 
 
-const cards = document.querySelectorAll('.cards');
-const sum = document.querySelectorAll('.sum');
 /* 
   <h1>Blackjack</h1>
   <p id="message-el">Want to play a round?</p>
