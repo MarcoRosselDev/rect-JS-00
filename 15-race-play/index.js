@@ -19,6 +19,6 @@ button.addEventListener('click', function(){
   } else if (player1 < player2) {
     h3.innerText = `${player1} < ${player2}, player2 win!`;
   } else {
-    h3.innerText = `${player1} = ${player2}, empate!`;
+    h3.innerText = `${player1} = ${player2}, tie!`;
   }
 })
