@@ -3,10 +3,17 @@ const cards = document.querySelector('.cards');
 const sum = document.querySelector('.sum');
 
 button.addEventListener('click', function(){
-  let card1 = Math.floor(Math.random() * 13);
-  let card2 = Math.floor(Math.random() * 13);
+
+  /* reandom cards 1-11 */  
+  let card1 = Math.floor(Math.random() * 12);
+  let card2 = Math.floor(Math.random() * 12);
   cards.innerText = `Cards: ${card1}, ${card2}`;
+
+  /* sum of the cards*/
+  sumaCards = card1 + card2;
+  sum.innerText = `Sum: ${sumaCards}`;
 })
+
 
 
 /* 
