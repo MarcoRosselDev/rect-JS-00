@@ -8,8 +8,8 @@ const buttonNewCard = document.querySelector('.buttonNewCard');
 button.addEventListener('click', function(){
 
   /* reandom cards 1-11 */  
-  let card1 = Math.floor(Math.random() * 12);
-  let card2 = Math.floor(Math.random() * 12);
+  let card1 = Math.floor(Math.random() * 11) + 1;
+  let card2 = Math.floor(Math.random() * 11) + 1;
   let a = cards.innerText = `Cards: ${card1}, ${card2}`;
   
   /* sum of the cards*/
@@ -20,7 +20,7 @@ button.addEventListener('click', function(){
   conditional(sumCards);
   
   buttonNewCard.addEventListener('click', function(){
-    let card3 = Math.floor(Math.random() * 12);
+    let card3 = Math.floor(Math.random() * 11) + 1;
     const sumAllCards = sumCards + card3;
     a = cards.innerText = `Cards: ${card1}, ${card2}, ${card3}`;
     sumCards = card1 + card2 + card3;
@@ -37,16 +37,6 @@ function conditional(sumCards){
     h3.innerText = `Wohooo! You've got Blackjack!`;
   } else {
     h3.innerText = `You're out of the game!`;
+    div.classList.add('add');
   }
 }
-
-
-
-/* 
-  <h1>Blackjack</h1>
-  <p id="message-el">Want to play a round?</p>
-  <p class="cards">Cards:</p>
-  <p class="sum">Sum:</p>
-  <button class="button">START GAME</button>
-*/
-
