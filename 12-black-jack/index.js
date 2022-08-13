@@ -1,5 +1,8 @@
 const button = document.querySelector('.button');
 
+let card1 = Math.floor(Math.random()*13);
+console.log(card1);
+
 button.addEventListener('click', function(){
 
 })
@@ -14,3 +17,4 @@ const sum = document.querySelectorAll('.sum');
   <p class="sum">Sum:</p>
   <button class="button">START GAME</button>
 */
+
