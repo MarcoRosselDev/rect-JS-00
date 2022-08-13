@@ -27,3 +27,8 @@ button {
   width: 150px;
   border: 0.2px solid azure;
 }
+
+.add {
+  visibility: hidden;
+  display: none;
+}
