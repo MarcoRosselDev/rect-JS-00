@@ -6,3 +6,9 @@
   <h3 class="phrase">I like architecture</h3>
   <button class="button">random</button>
 */
+
+const name = document.querySelector('.name');
+const age = document.querySelector('.age');
+const nationality = document.querySelector('.nationality');
+const phrase = document.querySelector('.phrase');
+const button = document.querySelector('.button');
