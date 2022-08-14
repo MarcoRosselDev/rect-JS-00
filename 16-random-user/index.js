@@ -43,18 +43,26 @@ const random = {
   }
 }
 
-const name = document.querySelector('.name');
+const name1 = document.querySelector('.name');
 const age = document.querySelector('.age');
 const nationality = document.querySelector('.nationality');
 const phrase = document.querySelector('.phrase');
 const button = document.querySelector('.button');
 
+let current = 0;
+
 button.addEventListener('click', function() { 
-  randomUser();
-  
+  currentItem = Math.floor(Math.random() * random.length);
+  // Math.floor(Math.random() * colors.length)
+  showPerson();
 })
 
-function randomUser(){
-  let user = Math.floor((Math.random() * 7) + 1);
-  return user;
+function showPerson() {
+  const item = reviews[currentItem];
+
+  name1.textContent = item.name;
+  age.textContent = item.age;
+  nationality.textContent = item.nationality;
+  phrase.textContent = item.phrase;
+  
 }
