@@ -43,8 +43,6 @@ const users = {
   }
 }
 
-console.log(users[7].age);
-
 let name1 = document.querySelector('.name');
 let age = document.querySelector('.age');
 let nationality = document.querySelector('.nationality');
@@ -54,5 +52,8 @@ let button = document.querySelector('.button');
 button.addEventListener('click', function() {
 
   name1.innerText = users[1].name;
+  age.innerText = users[1].age;
+  nationality.innerText = users[1].nationality;
+  phrase.innerText = users[1].phrase;
 
 })
