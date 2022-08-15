@@ -50,10 +50,10 @@ let phrase = document.querySelector('.phrase');
 let button = document.querySelector('.button');
 
 button.addEventListener('click', function() {
-
-  name1.innerText = users[1].name;
-  age.innerText = users[1].age;
-  nationality.innerText = users[1].nationality;
-  phrase.innerText = users[1].phrase;
+  let a = Math.floor(Math.random()* 7);
+  name1.innerText = users[a].name;
+  age.innerText = users[a].age;
+  nationality.innerText = users[a].nationality;
+  phrase.innerText = users[a].phrase;
 
 })
