@@ -51,3 +51,8 @@ let nationality = document.querySelector('.nationality');
 let phrase = document.querySelector('.phrase');
 let button = document.querySelector('.button');
 
+button.addEventListener('click', function() {
+
+  name1.innerText = users[1].name;
+
+})
