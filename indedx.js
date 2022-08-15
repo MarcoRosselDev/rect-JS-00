@@ -30,6 +30,9 @@ class MyArray {
     delete this.data[this.length - 1];
     this.length--;
   }
+  
+  /* reto crar un metodo para eliminar un elemento del principio
+     agregar un elemento al princio. */
 }
 
 
