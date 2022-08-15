@@ -1,4 +1,4 @@
-const users = {
+let users = {
   1:{
     name: 'andres',
     age: '23',
@@ -50,7 +50,8 @@ let phrase = document.querySelector('.phrase');
 let button = document.querySelector('.button');
 
 button.addEventListener('click', function() {
-  let a = Math.floor(Math.random()* 7);
+  let a = Math.floor(Math.random() * users.length );
+
   name1.innerText = users[a].name;
   age.innerText = users[a].age;
   nationality.innerText = users[a].nationality;
