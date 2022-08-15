@@ -50,7 +50,10 @@ let phrase = document.querySelector('.phrase');
 let button = document.querySelector('.button');
 
 button.addEventListener('click', function() {
-  let a = Math.floor(Math.random() * users.length );
+  let a = Math.floor(Math.random() * 7 );
+  console.log(users.length);
+  /* me inprime undefined
+  nesecito aprender como acceder al length de un objeto complejo */
 
   name1.innerText = users[a].name;
   age.innerText = users[a].age;
