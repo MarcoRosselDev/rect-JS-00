@@ -18,6 +18,14 @@ class MyArray {
     this.length--;
     return lastItem;
   }
+  delete(){}
+  shiftIndex(index) {
+    for (let i = index; i < index.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    delete this.data[this.length - 1];
+    this.length--;
+  }
 }
 
 
