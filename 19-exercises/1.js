@@ -19,3 +19,7 @@ function logData() {
 logData();
 
 console.log(logData());
+console.log(logData());
+console.log(logData());
+console.log(logData());
+console.log(logData());
