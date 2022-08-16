@@ -17,7 +17,3 @@ function logData() {
 };
 
 logData();
-logData();
-logData();
-logData();
-logData();
