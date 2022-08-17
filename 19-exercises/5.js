@@ -7,3 +7,5 @@ let weekday = "Friday";
 if (dayOfMonth === 13 && weekday === "Friday") {
   console.log("scary face");
 }
+
+// && se requiere de las dos condiciones true para que se ejecute el log
