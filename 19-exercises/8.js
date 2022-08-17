@@ -27,11 +27,15 @@ let fruit = [
 let oranges = document.querySelector('.oranges');
 let apples = document.querySelector('.apples');
 
-for (let i = 0; i < fruit.length; i++) {
+function a() {
+  for (let i = 0; i < fruit.length; i++) {
   
-  if (fruit[i] === '🍊') {
-    oranges.innerHTML += '🍊';
-  } else {
-    apples.innerHTML += '🍎';
+    if (fruit[i] === '🍊') {
+      oranges.innerHTML += '🍊';
+    } else {
+      apples.innerHTML += '🍎';
+    }
   }
 }
+
+a();
