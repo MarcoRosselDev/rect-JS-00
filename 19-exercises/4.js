@@ -8,5 +8,8 @@ let largeCountries = ['tuvalu', 'india', 'usa', 'indonesia', 'monaco'];
 
 largeCountries.pop();
 largeCountries.push('pkistan');
-
+largeCountries.shift();           //elimina el primero del array
+largeCountries.unshift('china');  //agrega al principio del array
 console.log(largeCountries);
+
+// solution = [ 'china', 'india', 'usa', 'indonesia', 'pkistan' ];
