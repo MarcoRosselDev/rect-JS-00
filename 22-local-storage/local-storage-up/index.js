@@ -8,11 +8,13 @@ const input = document.querySelector('.input');
 const button = document.querySelector('.button');
 const ul = document.querySelector('.ul');
 
-let b = JSON.parse(localStorage.getItem("myLeads"));
+let b = JSON.parse(localStorage.getItem("myLeads")); 
+// con esto convierto el string en objeto (del localstorage)
 
+//ahora le pregunta si hay local storage para renderizarlo primero
 if (b) {
   myLeads = b;
-  renderLeads();
+  renderLeads(); // por eso es importante hacer el render como funcion u/c
 }
 
 button.addEventListener('click', function(){
