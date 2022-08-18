@@ -11,3 +11,8 @@ button.addEventListener('click', function() {
   `;
   input.value = "";
 })
+
+// para almazenar la informacion en memoria local usamos los siguientes metodos
+
+// localStorage.clear()     para limpiar el histial
+// localStorage.setItem("myList", "http://www.example.com")     para guardar
