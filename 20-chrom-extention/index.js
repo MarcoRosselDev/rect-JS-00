@@ -10,6 +10,7 @@ let myLeads = [];
 const button = document.querySelector('.input-btn');
 const input = document.querySelector('.input-el');
 
-button.addEventListener('dblclick', function() {
-  console.log('button is clicked');
+button.addEventListener('click', function() {
+  myLeads.push("www.awesomelead.com");
+  console.log(myLeads);
 });
