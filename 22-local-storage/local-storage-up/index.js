@@ -15,8 +15,8 @@ button.addEventListener('click', function(){
 
   // save the myLeads array to localStorage
   // localStorage.setItem("myList", "http://www.example.com")     para guardar
-  localStorage.setItem('myLeads', JSON.stringify(myLeads));
-
+  let a = localStorage.setItem('myLeads', JSON.stringify(myLeads));
+  console.log(a);
   renderLeads();
 })
 
@@ -33,3 +33,6 @@ function renderLeads() {
   };
   ul.innerHTML = listItem;
 };
+
+// null -> how you as a developer signalize emptiness
+// undefined -> how JavaScript signalize emptiness
