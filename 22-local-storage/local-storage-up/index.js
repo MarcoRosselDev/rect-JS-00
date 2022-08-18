@@ -13,12 +13,12 @@ button.addEventListener('click', function(){
   myLeads.push(input.value);
   input.value = ""          // para limpiar el input
   renderLeads();            // funcioni para inprimir que haremos despues
-});
+})
 
 function renderLeads() {
   let listItem = "";
   for (let i = 0; i < myLeads.length; i++) {
-    myLeads[i] += `
+    listItem += `
     <li>
       <a target="_blank" href='${myLeads[i]}'>
       ${myLeads[i]}
@@ -26,4 +26,5 @@ function renderLeads() {
     </li>
     `
   };
+  ul.innerHTML = listItem;
 };
