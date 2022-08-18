@@ -16,3 +16,8 @@ button.addEventListener('click', function() {
 
 // localStorage.clear()     para limpiar el histial
 // localStorage.setItem("myList", "http://www.example.com")     para guardar
+
+//----------------------------------------------------------------
+
+// JSON.stryngify()   convierte en string cualquier objeto
+// JSON.parse()       hace lo inverso, convierte a objeto un string
