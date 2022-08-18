@@ -12,7 +12,12 @@ const ul = document.querySelector('.ul');
 button.addEventListener('click', function(){
   myLeads.push(input.value);
   input.value = ""          // para limpiar el input
-  renderLeads();            // funcioni para inprimir que haremos despues
+
+  // save the myLeads array to localStorage
+  // localStorage.setItem("myList", "http://www.example.com")     para guardar
+  localStorage.setItem('myLeads', JSON.stringify(myLeads));
+
+  renderLeads();
 })
 
 function renderLeads() {
