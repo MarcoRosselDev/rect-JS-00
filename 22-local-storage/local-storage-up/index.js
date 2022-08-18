@@ -4,15 +4,21 @@
   <h4 class="h4"></h4> */
 
 let myLeads = [];
-
 const input = document.querySelector('.input');
 const button = document.querySelector('.button');
 const ul = document.querySelector('.ul');
 
+let b = JSON.parse(localStorage.getItem("myLeads"));
+
+if (b) {
+  myLeads = b;
+  renderLeads();
+}
+
 button.addEventListener('click', function(){
   myLeads.push(input.value);
   input.value = ""          // para limpiar el input
-
+  
   // save the myLeads array to localStorage
   // localStorage.setItem("myList", "http://www.example.com")     para guardar
   let a = localStorage.setItem('myLeads', JSON.stringify(myLeads));
