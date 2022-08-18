@@ -7,19 +7,12 @@
 
 let myLeads = [];
 
-const button = document.querySelector('.input-btn');
 const input = document.querySelector('.input-el');
-const log = document.querySelector('.log');
+const button = document.querySelector('.input-btn');
 const h4 = document.querySelector('.h4');
+const ul = document.querySelector('.ul');
 
 button.addEventListener('click', function() {
   myLeads.push(input.value);
-  console.log(myLeads);
+  ul.innerHTML += "<li>" + input.value + "</li> <br>";
 });
-
-log.addEventListener('click', function() {
-  for (let i = 0; i < myLeads.length; i++) {
-    const element = myLeads[i];
-    h4.innerText += element;
-  }
-})
