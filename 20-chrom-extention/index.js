@@ -14,15 +14,16 @@ const ul = document.querySelector('.ul');
 
 button.addEventListener('click', function() {
   myLeads.push(input.value);
+  // clear out the input field
   ul.innerHTML += "<li>" + input.value + "</li>";
   //si uso innerText se renderia el li, para eso es el innerHTML y sus diferencias
-
+  input.value = ""; // solucion a limpiar el input al enviar
 });
 
-for (let i = 0; i < myLeads.length; i++) {
-  const li = document.createElement('li');
-  li.textContent = myLeads[i];
-  ul.append(li);
-}
+// for (let i = 0; i < myLeads.length; i++) {
+//   const li = document.createElement('li');
+//   li.textContent = myLeads[i];
+//   ul.append(li);
+// }
 
 //esto hace lo mismo pero es mucho mas entendible la primero por que es mas visual
