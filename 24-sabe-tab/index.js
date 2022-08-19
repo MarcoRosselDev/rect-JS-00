@@ -5,15 +5,12 @@ const cleanAll = document.querySelector('.clean-all');
 const ul = document.querySelector('.ul');
 let link = [];
 
-const localStrg = JSON.parse(link);
-if (localStrg) {
-  printAll(localStrg);
-}
+const localStrgLoad = JSON.parse(localStorage.getItem("listExample"));
 
 put.addEventListener('click', function(){
   link.push(inpt.value);
   // guardar en el local storage la informacion para despues mostrarla
-  localStorage.setItem("listExample", JSON.stringify(link));
+  let i = localStorage.setItem("listExample", JSON.stringify(link));
   printAll(inpt.value);
 });
 
