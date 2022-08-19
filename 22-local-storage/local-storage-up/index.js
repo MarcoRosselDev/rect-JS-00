@@ -9,8 +9,15 @@ const button = document.querySelector('.button');
 const clean = document.querySelector('.delete');
 const ul = document.querySelector('.ul');
 
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")); 
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")); 
 // con esto convierto el string en objeto (del localstorage)
+
+clean.addEventListener('dblclick', function(){
+  localStorage.clear();
+  myLeads = [];
+  renderLeads();
+})
+
 
 //ahora le pregunta si hay local storage para renderizarlo primero
 if (leadsFromLocalStorage) {
