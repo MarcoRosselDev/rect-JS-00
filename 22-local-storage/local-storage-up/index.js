@@ -12,18 +12,24 @@ const ul = document.querySelector('.ul');
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")); 
 // con esto convierto el string en objeto (del localstorage)
 
-clean.addEventListener('dblclick', function(){
-  localStorage.clear();
-  myLeads = [];
-  renderLeads();
-})
-
-
 //ahora le pregunta si hay local storage para renderizarlo primero
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  renderLeads(); // por eso es importante hacer el render como funcion u/c
+  render(myLeads); // por eso es importante hacer el render como funcion u/c
 }
+function render(arr) {
+  let listItem = "";
+  for (let i = 0; i < arr.length; i++) {
+    listItem += `
+    <li>
+      <a target="_blank" href='${arr[i]}'>
+      ${arr[i]}
+      </a>
+    </li>
+    `
+  };
+  ul.innerHTML = listItem;
+};
 
 button.addEventListener('click', function(){
   myLeads.push(input.value);
@@ -32,23 +38,15 @@ button.addEventListener('click', function(){
   // save the myLeads array to localStorage
   // localStorage.setItem("myList", "http://www.example.com")     para guardar
   let a = localStorage.setItem('myLeads', JSON.stringify(myLeads));
-  console.log(a);
-  renderLeads();
+  render(myLeads);
 })
 
-function renderLeads() {
-  let listItem = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    listItem += `
-    <li>
-      <a target="_blank" href='${myLeads[i]}'>
-      ${myLeads[i]}
-      </a>
-    </li>
-    `
-  };
-  ul.innerHTML = listItem;
-};
+clean.addEventListener('dblclick', function(){
+  localStorage.clear();
+  myLeads = [];
+  render(myLeads);
+})
+
 
 // null -> how you as a developer signalize emptiness
 // undefined -> how JavaScript signalize emptiness

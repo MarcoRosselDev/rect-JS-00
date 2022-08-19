@@ -7,6 +7,17 @@ let link = [];
 
 const localStrgLoad = JSON.parse(localStorage.getItem("listExample"));
 
+cleanAll.addEventListener('dblclick', function() {
+  link = [];
+  localStorage.clear();
+  printAll(link);
+})
+
+if (localStrgLoad) {
+  link = localStrgLoad;
+  printAll(link);
+}
+
 put.addEventListener('click', function(){
   link.push(inpt.value);
   // guardar en el local storage la informacion para despues mostrarla
@@ -23,6 +34,3 @@ function printAll(link) {
   inpt.value = "";
 }
 
-cleanAll.addEventListener('dblclick', function() {
-
-})
