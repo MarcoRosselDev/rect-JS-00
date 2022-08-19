@@ -14,7 +14,7 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 clean.addEventListener('dblclick', function(){
   localStorage.clear();
-  myLeads = [];
+  myLeads = [];-
   renderLeads();
 })
 
