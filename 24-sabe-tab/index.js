@@ -26,11 +26,14 @@ put.addEventListener('click', function(){
 });
 
 function printAll(link) { 
-  ul.innerHTML += `
-  <li>
-      ${link}
-  </li>
-  `
-  inpt.value = "";
+  let listItem  = "";
+  for (let i = 0; i < link.length; i++) {
+    listItem += `
+    <li>
+        ${link[i]}
+    </li>
+    `
+  };
+  ul.innerHTML = listItem; 
 }
 
