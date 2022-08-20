@@ -4,11 +4,18 @@ const btnDelete = document.querySelector('.btn-delete');
 const list = document.querySelector('.list');
 let saveList = [];
 
+const local = JSON.parse(localStorage.getItem('exampleList'));
+
+if (local) {
+  saveList = local;
+  imprimir(saveList);
+}
+
 btnPush.addEventListener('click', function() {
   saveList.push(ipt.value);
   ipt.value = "";
   localStorage.setItem('exampleList', JSON.stringify(saveList));
-  imprimir();
+  imprimir(saveList);
 });
 
 function imprimir(arr) {
