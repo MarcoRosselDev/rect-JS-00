@@ -11,13 +11,6 @@ if (local) {
   imprimir(saveList);
 }
 
-btnPush.addEventListener('click', function() {
-  saveList.push(ipt.value);
-  ipt.value = "";
-  localStorage.setItem('exampleList', JSON.stringify(saveList));
-  imprimir(saveList);
-});
-
 function imprimir(arr) {
   let mostrar = "";
   for (let i = 0; i < arr.length; i++) {
@@ -29,3 +22,16 @@ function imprimir(arr) {
   };
   list.innerHTML = mostrar
 }
+
+btnPush.addEventListener('click', function() {
+  saveList.push(ipt.value);
+  ipt.value = "";
+  localStorage.setItem('exampleList', JSON.stringify(saveList));
+  imprimir(saveList);
+});
+
+btnDelete.addEventListener('dblclick', function() {
+  localStorage.clear();
+  saveList = [];
+  imprimir(saveList);
+})
