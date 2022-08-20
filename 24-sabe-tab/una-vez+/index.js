@@ -18,13 +18,6 @@ if (lcstg) {
   printt(parrafo);
 }
 
-put.addEventListener('click', function() {
-  parrafo.push(inpt.value);
-  inpt.value = "";
-  localStorage.setItem('listExample', JSON.stringify(parrafo));
-  printt(parrafo);
-});
-
 function printt(arr) {
   let texto = "";
   for (let i = 0; i < arr.length; i++) {
@@ -33,6 +26,19 @@ function printt(arr) {
       ${arr[i]}
     </li>
     `
-    li.innerHTML = texto;
   }
+  li.innerHTML = texto;
 }
+
+put.addEventListener('click', function() {
+  parrafo.push(inpt.value);
+  inpt.value = "";
+  localStorage.setItem('listExample', JSON.stringify(parrafo));
+  printt(parrafo);
+});
+
+clean.addEventListener('dblclick', function(){
+  localStorage.clear();
+  parrafo = [];
+  printt(parrafo);
+})
