@@ -29,4 +29,10 @@ put.addEventListener('click', function(){
   inpt.value = "";
   localStorage.setItem('listExample', JSON.stringify(link));
   prinnt(link);
+});
+
+cleanAll.addEventListener('dblclick', function(){
+  localStorage.clear();
+  link = [];
+  prinnt(link);
 })
