@@ -12,8 +12,20 @@ const clean = document.querySelector('.btn-clean');
 const li = document.querySelector('.li');
 let parrafo = [];
 
-console.log(inpt, put, clean, li);
-
 put.addEventListener('click', function() {
-  
-})
+  parrafo.push(inpt.value);
+  inpt.value = "";
+  printt(parrafo);
+});
+
+function printt(arr) {
+  let texto = "";
+  for (let i = 0; i < arr.length; i++) {
+    texto += `
+    <li>
+      ${arr[i]}
+    </li>
+    `
+    li.innerHTML = texto;
+  }
+}
