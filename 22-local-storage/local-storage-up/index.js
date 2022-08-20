@@ -12,6 +12,7 @@ if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   render(myLeads); // por eso es importante hacer el render como funcion u/c
 }
+
 function render(arr) {
   let listItem = "";
   for (let i = 0; i < arr.length; i++) {
@@ -32,7 +33,7 @@ button.addEventListener('click', function(){
   
   // save the myLeads array to localStorage
   // localStorage.setItem("myList", "http://www.example.com")     para guardar
-  let a = localStorage.setItem('myLeads', JSON.stringify(myLeads));
+  localStorage.setItem('myLeads', JSON.stringify(myLeads));
   render(myLeads);
 })
 

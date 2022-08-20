@@ -5,35 +5,8 @@ const cleanAll = document.querySelector('.clean-all');
 const ul = document.querySelector('.ul');
 let link = [];
 
-const localStrgLoad = JSON.parse(localStorage.getItem("listExample"));
-
-cleanAll.addEventListener('dblclick', function() {
-  link = [];
-  localStorage.clear();
-  printAll(link);
-})
-
-if (localStrgLoad) {
-  link = localStrgLoad;
-  printAll(link);
-}
-
 put.addEventListener('click', function(){
   link.push(inpt.value);
-  // guardar en el local storage la informacion para despues mostrarla
-  let i = localStorage.setItem("listExample", JSON.stringify(link));
-  printAll(inpt.value);
-});
-
-function printAll(link) { 
-  let listItem  = "";
-  for (let i = 0; i < link.length; i++) {
-    listItem += `
-    <li>
-        ${link[i]}
-    </li>
-    `
-  };
-  ul.innerHTML = listItem; 
-}
-
+  inpt.value = "";
+  console.log(link);
+})
