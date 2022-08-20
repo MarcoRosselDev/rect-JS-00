@@ -10,11 +10,18 @@ const inpt = document.querySelector('.inpt');
 const put = document.querySelector('.btn-put');
 const clean = document.querySelector('.btn-clean');
 const li = document.querySelector('.li');
+const lcstg = JSON.parse(localStorage.getItem('listExample'));
 let parrafo = [];
+
+if (lcstg) {
+  parrafo = lcstg;
+  printt(parrafo);
+}
 
 put.addEventListener('click', function() {
   parrafo.push(inpt.value);
   inpt.value = "";
+  localStorage.setItem('listExample', JSON.stringify(parrafo));
   printt(parrafo);
 });
 
