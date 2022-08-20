@@ -28,3 +28,9 @@ btnPut.addEventListener('click', function() {
   localStorage.setItem('listExample', JSON.stringify(saveArray));
   printHtml(saveArray);
 });
+
+btnClean.addEventListener('dblclick', function() {
+  localStorage.clear();
+  saveArray = [];
+  printHtml(saveArray);
+})
