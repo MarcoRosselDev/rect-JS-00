@@ -8,5 +8,13 @@ let link = [];
 put.addEventListener('click', function(){
   link.push(inpt.value);
   inpt.value = "";
-  console.log(link);
+  prinnt();
 })
+
+function prinnt(arr) {
+  let it = "";
+  for (let i = 0; i < arr.length; i++) {
+    it = arr[i];
+  }
+  ul.innerHTML = it;
+}
