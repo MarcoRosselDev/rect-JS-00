@@ -10,13 +10,26 @@ const imgs = [
 
 // simulamos un documento html que tiene un div con la clase (class="imagenes")
 const imagDiv = document.querySelector(".imagenes");
-
+/*
 function renderImages() {
   for (let i = 0; i < imgs.length; i++) {
     imagDiv.innerHTML += `
     <img class="lo-que-sea" src="${imgs[i]}"></img>
     `
   }
+}
+
+renderImages();
+*/
+
+function renderImages() {
+  let imgDOM = "";
+  for (let i = 0; i < imgs.length; i++) {
+    img += `
+    <img class="lo-que-sea" src="${imgs[i]}"></img>
+    `
+  }
+  imagDiv.innerHTML = imgDOM;
 }
 
 renderImages();
