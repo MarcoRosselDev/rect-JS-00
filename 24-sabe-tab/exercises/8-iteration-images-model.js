@@ -25,7 +25,7 @@ renderImages();
 function renderImages() {
   let imgDOM = "";
   for (let i = 0; i < imgs.length; i++) {
-    img += `
+    imgDOM += `
     <img class="lo-que-sea" src="${imgs[i]}"></img>
     `
   }
