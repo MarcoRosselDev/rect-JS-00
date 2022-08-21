@@ -33,3 +33,8 @@ function renderImages() {
 }
 
 renderImages();
+
+// manipular el DOM en cada iteración tiene un costo,
+// para evitarlo aplicamos una variable let fuera a la que le pasaremos las iteraciónes
+// luego se aplica la manipulación del DOM (.inner...)
+// cuando es una app más grande se nota la diferencia de performanse
