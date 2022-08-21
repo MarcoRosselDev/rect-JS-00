@@ -12,5 +12,11 @@ const imgs = [
 const imagDiv = document.querySelector(".imagenes");
 
 function renderImages() {
-  
+  for (let i = 0; i < imgs.length; i++) {
+    imagDiv.innerHTML += `
+    <img class="lo-que-sea" src="${imgs[i]}"></img>
+    `
+  }
 }
+
+renderImages();
