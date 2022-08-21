@@ -11,11 +11,17 @@
 
 function generateSentence(desc, arr) {
   let a = `The ${arr.length} ${desc} are `;
+  const lastArr = arr.length - 1;
   for (let i = 0; i < arr.length; i++) {
-    a += arr[i] + ", ";
+    if (i === lastArr) {
+      a += arr[i];
+    } else {
+      a += arr[i] + ", ";
+    }
   }
   return a;
 }
 
 const b = generateSentence('the biggest', ["China", "India", "USA"]);
 console.log(b);
+
