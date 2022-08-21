@@ -14,3 +14,7 @@ let data = [
 // Log Jane's score when the button is clicked (via data)
 
 const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function(){
+  console.log(data[0].score);
+})
