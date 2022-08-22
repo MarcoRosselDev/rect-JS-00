@@ -33,3 +33,5 @@ btnClean.addEventListener('dblclick', function(){
   saveInput = [];
   printDOM(saveInput);
 })
+
+// https://www.youtube.com/watch?v=NwWfevfNQnU
