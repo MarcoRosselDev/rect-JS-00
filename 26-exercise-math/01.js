@@ -37,3 +37,4 @@ btnPerimetro.addEventListener('click', function(){
   divCuadrado.innerHTML += printDOM;
   iptCuadrado.value = "";
 })
+
