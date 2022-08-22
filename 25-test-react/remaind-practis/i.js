@@ -15,6 +15,16 @@ btnSubmit.addEventListener('click', function(){
   saveInput.push(inp.value);
   inp.value = "";
   localStorage.setItem('exampleObject', JSON.stringify(saveInput));
-  printDOM();
+  printDOM(saveInput);
   console.log(saveInput);
 })
+
+function printDOM(obj) {
+  let finalPrint = ""
+  for (let i = 0; i < obj.length; i++) {
+    finalPrint += `
+    <li>${obj[i]}</li> 
+    `
+  };
+  li.innerHTML = finalPrint;
+}
