@@ -1,15 +1,66 @@
-*{
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
 }
-button {
-  color: whitesmoke;
-  background-color: black;
-  border-radius: 5px;
-  border: none;
-  height: 1.5rem;
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #61b5fa;
 }
+
 input {
-  text-align: left;
-  color: deepskyblue;
+  height: 2.5rem;
+  color: #3c3c3c;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 1.4rem 7rem;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+/* button 3 (glas button)*/
+
+.button3 {
+  margin-top: 1rem;
+  background-image: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, .5) 51%,
+    transparent 100%
+  );
+  background-size: 300%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 1.4rem 4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: 300ms ease-in-out background-position;
+}
+.button3:hover {
+  background-position: right top;
 }

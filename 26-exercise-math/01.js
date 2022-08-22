@@ -6,7 +6,15 @@ const divCuadrado = document.querySelector('.cuadrado');
 btnArea.addEventListener('click', function(){
   divCuadrado.innerHTML += `
   <h4>The area of a square
-  of ${iptCuadrado.value} meters
-  is: <strong>${iptCuadrado.value ** 2} meters</strong></h4>`
+  white ${iptCuadrado.value} meters
+  is: <strong>${iptCuadrado.value ** 2} meters square</strong></h4>`
+  iptCuadrado.value = "";
+});
+
+btnPerimetro.addEventListener('click', function(){
+  divCuadrado.innerHTML += `
+  <h4>The perimeter of a square
+  white ${iptCuadrado.value} meters
+  is: <strong>${iptCuadrado.value * 4} meters</strong></h4>`
   iptCuadrado.value = "";
 })
