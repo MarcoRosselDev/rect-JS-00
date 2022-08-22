@@ -1,0 +1,15 @@
+*{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+button {
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  height: 1.5rem;
+}
+input {
+  text-align: left;
+  color: deepskyblue;
+}
