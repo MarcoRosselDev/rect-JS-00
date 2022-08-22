@@ -4,10 +4,9 @@ const btnPerimetro = document.querySelector('.btn-perimetro-cuadrado');
 const divCuadrado = document.querySelector('.cuadrado');
 
 btnArea.addEventListener('click', function(){
-  if (iptCuadrado.value === string) {
-    console.log('put a number please');
-  } else {
-    console.log(iptCuadrado.value ** 2);
-  }
+  divCuadrado.innerHTML += `
+  <h4>The area of a square
+  of ${iptCuadrado.value} meters
+  is: <strong>${iptCuadrado.value ** 2} meters</strong></h4>`
   iptCuadrado.value = "";
 })
