@@ -10,7 +10,15 @@ const ipt = document.querySelector('.ipt');
 const btnPush = document.querySelector('.btn-push');
 const btnClean = document.querySelector('.btn-clean');
 const li = document.querySelector('.li');
+const localIs = JSON.parse(localStorage.getItem('example'));
 let saveList = [];
+
+if (localIs) {
+  console.log(localIs);
+  saveList = localIs;
+  console.log(saveList);
+  printDOM(saveList)
+}
 
 btnPush.addEventListener('click', function(){
   saveList.push(ipt.value);
