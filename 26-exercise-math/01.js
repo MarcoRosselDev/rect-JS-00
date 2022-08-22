@@ -12,9 +12,19 @@ btnArea.addEventListener('click', function(){
 });
 
 btnPerimetro.addEventListener('click', function(){
-  divCuadrado.innerHTML += `
-  <h4>The perimeter of a square
-  white ${iptCuadrado.value} meters
-  is: <strong>${iptCuadrado.value * 4} meters</strong></h4>`
+
+  let printDOM = "";
+
+  if (iptCuadrado.value == 0) {
+    printDOM += `<p>please put a number other than 0</p>`
+  } else if (iptCuadrado.value < 0) {
+    printDOM += `<p class="pwarning">please put a positive number</p>`
+  } else {
+    printDOM += `
+    <h4>The perimeter of a square
+    white ${iptCuadrado.value} meters
+    is: <strong>${iptCuadrado.value * 4} meters</strong></h4>`
+  }
+  divCuadrado.innerHTML += printDOM;
   iptCuadrado.value = "";
 })

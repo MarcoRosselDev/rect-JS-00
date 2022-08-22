@@ -7,6 +7,9 @@
   font-family: 'Raleway', sans-serif;
   color: #fff;
 }
+h1{
+  margin-bottom: 1rem;
+}
 body {
   display: grid;
   place-content: center;
@@ -26,6 +29,12 @@ input {
   font-size: 1rem;
   letter-spacing: .2rem;
   font-weight: 700;
+  box-shadow: 10px 10px 2px rgb(106, 105, 105);
+}
+
+.pwarning {
+  color: red;
+  font-weight: 400;
 }
 
 button {
